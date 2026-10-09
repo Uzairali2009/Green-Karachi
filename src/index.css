@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-paper text-ink font-sans; }
+  h1, h2, h3 { @apply font-display; }
+  input, select { @apply w-full rounded-lg border border-line bg-paper px-3 py-2.5 text-ink; }
+  :focus-visible { outline: 3px solid #5f9f45; outline-offset: 1px; }
+}
+
+@layer components {
+  .card { @apply rounded-xl border border-line bg-white p-5; }
+  .btn { @apply mt-4 rounded-lg bg-forest px-4 py-2.5 font-bold text-white hover:opacity-90; }
+  .btn-sm { @apply mt-0 px-3 py-1.5 text-sm; }
+  .btn-ghost { @apply bg-transparent text-red-700 border border-red-700; }
+  .label { @apply mb-1 mt-3 block text-sm font-semibold; }
+  th { @apply text-left text-xs font-semibold text-mute px-2.5 py-2 whitespace-nowrap; }
+  td { @apply px-2.5 py-2 border-t border-line whitespace-nowrap; }
+}
